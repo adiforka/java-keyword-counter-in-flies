@@ -31,7 +31,6 @@ public class JavaKeywordCounter {
     }
 
     public void addFileToList(String path) {
-
         File file = new File(path);
         files.add(file);
     }
@@ -41,7 +40,6 @@ public class JavaKeywordCounter {
     }
 
     public int countTotalOccurrences(List<File> files) throws Exception {
-
         int totalCount = 0;
         for (File f : files) {
             totalCount += this.countKeywordOccurrencesPerFile(f);
@@ -50,7 +48,6 @@ public class JavaKeywordCounter {
     }
 
     public int countKeywordOccurrencesPerFile(File file) throws Exception {
-
         Scanner scanner = new Scanner(file);
         //sets are optimized to check for dulicates, and so also to check for "contains" query ops
         Set<String> keywordSet = new HashSet<>(Arrays.asList(keywords));
